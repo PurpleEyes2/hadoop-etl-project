@@ -148,7 +148,7 @@ crontab -l  # Проверка
 
 ## **8. Проверка целостности данных**
 ### **8.1. verify_data.sh**
-``
+```
 HDFS_FILE="/data/output/cleaned_data.csv"
 LOCAL_COPY="./downloaded_data.csv"
 
@@ -164,8 +164,12 @@ if [ "$original_sum" == "$processed_sum" ]; then
 else
     echo "Обнаружены расхождения"
 fi
-``
+```
 ### **8.2. Запуск**
+```
+chmod +x scripts/verify_data.sh
+./scripts/verify_data.sh
+```
 
 ---
 
